@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game development</title>
+
+    <script
+      src="https://kit.fontawesome.com/bb118f70e6.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>GAME ON</h1>
+      <nav class="header-menu">
+        <ul>
+          <li><a href="#home" onclick="showSection('landing')">Home</a></li>
+          <li>
+            <a href="#about-me" onclick="showSection('about-me')">About Me</a>
+          </li>
+          <li>
+            <a href="#projects" onclick="showSection('projects')">Projects</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="landing" class="container-section">
+      <img src="imgs/background.jpg" alt="" />
+      <div class="landing">
+        <h2>Welcome to My Portfolio</h2>
+        <p>
+          Aspiring game developers embark on an exhilarating journey, traversing
+          the dynamic landscape of creativity and technology. In the immersive
+          realm of learning game development, enthusiasts delve into the
+          intricacies of coding, design, and storytelling, sculpting their
+          visions into interactive masterpieces. With each line of code, every
+          pixel meticulously placed, and every narrative choice carefully
+          crafted, these developers hone their skills, blending art and science
+          to breathe life into virtual worlds. Through the iterative process of
+          trial and error, they discover the magic of problem-solving,
+          transforming challenges into stepping stones toward mastery. As they
+          navigate the ever-evolving landscape of game development, these
+          learners embrace the joy of creation, bringing forth innovative
+          experiences that captivate and inspire players.
+        </p>
+      </div>
+    </section>
+
+    <section id="about-me" class="container-section">
+      <img src="imgs/background.jpg" alt="" />
+      <div class="about-me">
+        <h2>About Me</h2>
+        <p>
+          Write a brief introduction about yourself, your passion for game
+          development, and your skills.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="container-section">
+      <img src="imgs/background.jpg" alt="" />
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>Project 1: Title</h3>
+        <p>
+          Description of the project. Mention the technologies used and your
+          role in the development.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Project 2: Title</h3>
+        <p>
+          Description of the project. Mention the technologies used and your
+          role in the development.
+        </p>
+      </div>
+
+      <button class="btn-show-more" onclick="toggleHiddenProjects()">
+        Show More
+      </button>
+
+      <div class="project hidden">
+        <h3>Project 3: Title</h3>
+        <p>
+          Description of the project. Mention the technologies used and your
+          role in the development.
+        </p>
+      </div>
+    </section>
+    <ul class="social">
+      <li>
+        <a href="#"><img src="imgs/facebook.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="imgs/twitter.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="imgs/instagram.png" alt="" /></a>
+      </li>
+    </ul>
+
+    <footer>
+      <div class="contact-info">
+        <p>
+          Contact: your@email.com | Follow me on
+          <a href="https://twitter.com/your_twitter">Twitter</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="JS/index.js"></script>
+  </body>
+</html>
