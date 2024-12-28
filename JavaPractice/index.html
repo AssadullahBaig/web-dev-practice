@@ -4,17 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game development</title>
-
-    <script
-      src="https://kit.fontawesome.com/bb118f70e6.js"
-      crossorigin="anonymous"
-    ></script>
-
     <link rel="stylesheet" href="css/style.css" />
+    <!-- box icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <h1>GAME ON</h1>
+    <header class="header">
+      <!-- <h1>GAME ON</h1> -->
+      <a href="#" class="logo">Game On</a>
       <nav class="header-menu">
         <ul>
           <li><a href="#home" onclick="showSection('landing')">Home</a></li>
@@ -30,8 +30,11 @@
 
     <section id="landing" class="container-section">
       <!-- <img src="imgs/background.jpg" alt="" /> -->
-      <div class="landing">
-        <h2>Welcome to My Portfolio</h2>
+      <div class="landing-content">
+        <h1>Hi, I'm <span>Assadullah </span></h1>
+        <div class="text-animate">
+          <h3>Frontend Developer</h3>
+        </div>
         <p>
           Aspiring game developers embark on an exhilarating journey, traversing
           the dynamic landscape of creativity and technology. In the immersive
@@ -47,6 +50,16 @@
           learners embrace the joy of creation, bringing forth innovative
           experiences that captivate and inspire players.
         </p>
+        <div class="btn-box">
+          <a href="#" class="btn">Hire Me</a>
+          <a href="#" class="btn">Let's Talk</a>
+        </div>
+      </div>
+
+      <div class="home-scri">
+        <a href="#"></a>
+        <a href="#"></a>
+        <a href="#"></a>
       </div>
     </section>
 
@@ -83,6 +96,9 @@
 
       <button class="btn-show-more" onclick="toggleHiddenProjects()">
         Show More
+      </button>
+      <button class="btn-show-less" onclick="toggleHiddenProjects()">
+        Show Less
       </button>
 
       <div class="project hidden">

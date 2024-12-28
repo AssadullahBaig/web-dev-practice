@@ -15,6 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
   showSection("landing");
 });
 
+// ========== test
+
+document.addEventListener("DOMContentLoaded", function () {
+  function toggleHiddenProjects() {
+    // Toggle the visibility of the "Show More" and "Show Less" buttons
+    showMoreBtn.style.display = "none";
+    showLessBtn.style.display = "inline-block";
+  }
+});
+
+// ========== test
+
 function showSection(sectionId) {
   const sections = document.querySelectorAll(".container-section");
   sections.forEach((section) => {
@@ -45,4 +57,18 @@ function toggleMenu() {
 function closeMenu() {
   const menu = document.querySelector(".menu");
   menu.style.left = "-250px";
+}
+
+// ===================
+
+// Add an event listener to the "Show More" button
+const showMoreBtn = document.querySelector(".btn-show-more");
+if (showMoreBtn) {
+  showMoreBtn.addEventListener("click", toggleHiddenProjects);
+}
+
+// Add an event listener to the "Show Less" button (initially hidden)
+const showLessBtn = document.querySelector(".btn-show-less");
+if (showLessBtn) {
+  showLessBtn.addEventListener("click", toggleHiddenProjects);
 }

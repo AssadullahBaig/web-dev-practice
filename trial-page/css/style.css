@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap");
+:root {
+  --overlay-color: #03a9f4;
+  --menu-color: rgb(59, 121, 100);
+  --dark-color: #162938;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #162938;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: black;
+}
+/* Header Styles */
+header {
+  background-color: #333;
+  color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Styles */
+.header-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header-menu li {
+  margin-right: 20px;
+}
+
+.header-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.header-menu a:hover {
+  color: #bbb;
+}
+
+/* Landing Section Styles */
+.container-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: dark; /* Set a light background color */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Hide overflow for rounded corners */
+}
+
+.container-section img {
+  width: 100%;
+  border-radius: 10px 10px 0 0; /* Apply rounded corners only to the top */
+}
+
+.landing {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+.landing h2 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.landing p {
+  font-size: 1.4em;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* About Me and Projects Section Styles */
+.about-me,
+.projects {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Project Styles */
+.project {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+/* Button Styles */
+.btn-show-more {
+  cursor: pointer;
+  color: #fff;
+  background-color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-show-more:hover {
+  background-color: #555;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  border-top: 2px solid #555; /* Add a border at the top for separation */
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+/* Social Icons Styles */
+.social {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social li a:hover img {
+  transform: scale(1.2);
+}
+
+.contact-info {
+  font-size: 14px;
+}
+
+.contact-info a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.contact-info a:hover {
+  color: #bbb; /* Adjust the color on hover as needed */
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-me,
+.projects {
+  position: relative;
+  z-index: 10;
+  background-color: grey;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  /* position: relative;
+  text-align: center;
+  z-index: 10;
+  display: block;
+  justify-content: center; */
+}
+
+h1,
+h2,
+h3 {
+  padding: 10 15;
+  z-index: 2;
+  color: white;
+}
+
+p {
+  line-height: 1.6;
+  color: white;
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/* .project {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  transition: opacity 0.3s ease-in-out;
+  position: relative;
+  text-align: center;
+  z-index: 10;
+  display: block;
+  justify-content: center;
+} */
+
+.project {
+  width: calc(33.33% - 20px); /* Adjust the width as needed */
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  background-color: #fff; /* Set a light background color */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project h3 {
+  color: #333; /* Set a dark text color */
+}
+
+.project p {
+  color: #555; /* Set a slightly darker text color */
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+/* .btn-show-more {
+  position: relative;
+  cursor: pointer;
+  color: #fff;
+  background-color: #333;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 3;
+}
+
+.btn-show-more:hover {
+  background-color: #555;
+  cursor: pointer;
+} */
+
+.btn-show-more {
+  cursor: pointer;
+  color: #fff;
+  background-color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  display: block;
+  margin: 20px auto; /* Center the button */
+}
+
+.btn-show-more:hover {
+  background-color: #555;
+}
+
+footer {
+  text-align: center;
+  /* transform: scale(1) translateY(-15px); */
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.menu nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu nav ul li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu a:hover {
+  color: #bbb; /* Adjust the color on hover as needed */
+}
+
+.menu-close-btn {
+  cursor: pointer;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.menu-close-btn:hover {
+  background-color: #777;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.menu-btn:hover {
+  background-color: #777;
+}
+
+/* Additional styling for the projects section in the menu */
+.menu #projects {
+  color: #fff;
+}
+
+.menu #projects h2 {
+  color: #bbb; /* Adjust the color as needed */
+}
+
+.menu #projects .project {
+  color: #111; /* Adjust the color as needed */
+}
+
+.menu #projects .btn-show-more {
+  background-color: #555;
+  color: #fff;
+}
+
+.menu #projects .btn-show-more:hover {
+  background-color: #777;
+}
+
+.social {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social li {
+  list-style: none;
+}
+
+.social li a {
+  display: inline-block;
+  filter: invert(1);
+  margin-right: 20px;
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+
+.social li a:hover {
+  transform: scale(0.5) translateY(-15px);
+}

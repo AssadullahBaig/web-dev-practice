@@ -1,35 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap");
+
 :root {
-  --overlay-color: #03a9f4;
-  --menu-color: rgb(59, 121, 100);
-  --dark-color: #162938;
+  --bg-color: #081b29;
+  --second-bg-color: #112e42;
+  --text-color: #ededed;
+  --main-color: #00abf0;
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  background: var(--bg-color);
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: url("../imgs/background.jpg");
 }
 
-header {
-  background-color: #333;
+/* Header styling */
+.header {
+  background-color: var(--second-bg-color);
   color: #fff;
-  padding: 20px;
+  padding: 2rem 9%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
 }
 
 .header-menu ul {
@@ -55,142 +71,159 @@ header {
   color: #bbb;
 }
 
+/* Section styling */
 .container-section {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* background: grey; */
+  padding: 10rem 9% 2rem;
+  background: url(../imgs/background.jpg) no repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.container-section img {
-  position: absolute;
+/* .container-section img { */
+/* position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.8;
-}
+  opacity: 0.8; */
+/* } */
+
+/* Landing page styling */
+
 .landing {
-  position: relative;
-  text-align: center;
-  z-index: 10;
-  display: block;
-  justify-content: center;
-}
-
-.landing h2 {
-  font-size: 2em;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.landing p {
-  font-size: 1.2em;
-  line-height: 1.5;
-  color: white;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: #fff;
-  margin-top: auto;
-}
-
-.contact-info {
-  font-size: 14px;
-  color: #bbb;
-}
-
-.contact-info a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.contact-info a:hover {
-  color: #bbb;
-}
-
-/* ================= */
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: #fff;
-  margin-top: auto; /* Push the footer to the bottom */
-  z-index: 2;
-}
-
-.contact-info {
-  font-size: 14px;
-}
-
-.contact-info a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.contact-info a:hover {
-  color: #bbb; /* Adjust the color on hover as needed */
-}
-
-.container {
-  max-width: 800px;
-  margin: 20px auto;
   display: flex;
+  align-items: center;
+  padding: 0 9%;
+}
+.landing-content {
+  /* display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 60rem;
+  margin: 0 auto; */
+  max-width: 60rem;
 }
 
-.about-me,
-.projects {
+.landing-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+  /* text-align: center; */
+  /* margin-bottom: 1rem; */
+}
+.landing-content .text-animate {
   position: relative;
-  z-index: 10;
-  /* background-color: grey; */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-  /* position: relative;
+  width: 32.8rem;
+}
+.landing-content .text-animate h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 0.7px var(--main-color);
+  /* text-align: center; */
+  /* margin-bottom: 2rem; */
+}
+
+.landing-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 4rem;
+  /* text-align: center;
+  margin-bottom: 4rem; */
+}
+
+.btn-box {
+  position: relative;
+  display: flex;
+  /* gap: 20px; */
+  justify-content: space-between;
+  width: 34.5rem;
+  height: 5rem;
+}
+
+.btn-box .btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 100%;
+  background: var(--main-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: var(--bg-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+  /* padding: 10px 20px; 
+  background-color: var(--main-color);
+  color: #fff;
   text-align: center;
-  z-index: 10;
-  display: block;
-  justify-content: center; */
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out; */
 }
 
-.container-section h2 {
+.btn-box .btn:hover {
+  color: var(--main-color);
+}
+
+.btn-box .btn:nth-child(2) {
+  background: transparent;
+  color: var(--main-color);
+}
+
+.btn-box .btn:nth-child(2):hover {
+  color: var(--bg-color);
+}
+
+.btn-box .btn:nth-child(2)::before {
+  background: var(--main-color);
+}
+
+.btn-box .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.btn-box .btn:hover::before {
+  width: 100%;
+}
+
+/* .btn:hover {
+  background-color: #007bb5;
+} */
+
+/* About Me section styling */
+.about-me {
+  text-align: center;
   padding: 20px;
-  color: white;
 }
 
-h1,
-h3 {
-  padding: 10px 20px;
-  z-index: 2;
-  color: white;
-  /* transform: translate(-50%, -50%); */
-}
-
-p {
-  line-height: 1.6;
-  color: white;
+/* Projects section styling */
+.projects {
+  text-align: center;
+  padding: 20px;
 }
 
 .project {
   margin-bottom: 20px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 20px;
-  transition: opacity 0.3s ease-in-out;
-  position: relative;
-  text-align: center;
-  z-index: 10;
-  display: block;
-  justify-content: center;
 }
 
 .hidden {
@@ -204,115 +237,36 @@ p {
   position: relative;
   cursor: pointer;
   color: #fff;
-  background-color: #333;
+  background-color: var(--second-bg-color);
   padding: 10px;
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s ease-in-out;
   z-index: 3;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .btn-show-more:hover {
-  background-color: #555;
+  background-color: #007bb5;
+}
+
+.btn-show-less {
+  display: none;
+  position: relative;
   cursor: pointer;
-}
-
-footer {
-  text-align: center;
-  /* transform: scale(1) translateY(-15px); */
-  padding: 20px;
-  background-color: #333;
   color: #fff;
-}
-
-.menu {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  transition: left 0.3s ease-in-out;
-  overflow: hidden;
-}
-
-.menu nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu nav ul li {
-  margin-bottom: 10px;
-}
-
-.menu a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 16px;
-  transition: color 0.3s ease-in-out;
-}
-
-.menu a:hover {
-  color: #bbb; /* Adjust the color on hover as needed */
-}
-
-.menu-close-btn {
-  cursor: pointer;
-  background-color: #555;
-  color: #fff;
-  border: none;
+  background-color: var(--second-bg-color);
   padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-.menu-close-btn:hover {
-  background-color: #777;
-}
-
-.menu-btn {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  cursor: pointer;
-  background-color: #555;
-  color: #fff;
   border: none;
-  padding: 10px;
   border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 3;
 }
 
-.menu-btn:hover {
-  background-color: #777;
+.btn-show-less:hover {
+  background-color: #007bb5;
 }
 
-/* Additional styling for the projects section in the menu */
-.menu #projects {
-  color: #fff;
-}
-
-.menu #projects h2 {
-  color: #bbb; /* Adjust the color as needed */
-}
-
-.menu #projects .project {
-  color: #111; /* Adjust the color as needed */
-}
-
-.menu #projects .btn-show-more {
-  background-color: #555;
-  color: #fff;
-}
-
-.menu #projects .btn-show-more:hover {
-  background-color: #777;
-}
-
+/* Social icons styling */
 .social {
   position: absolute;
   bottom: 2px;
@@ -337,4 +291,13 @@ footer {
 
 .social li a:hover {
   transform: scale(0.5) translateY(-15px);
+}
+
+/* Footer styling */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--second-bg-color);
+  color: #fff;
 }
